@@ -347,7 +347,10 @@ namespace erp_businessflex
 
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (DialogResult.Yes == MessageBox.Show("Estas Seguro que Deseas Salir de la Forma?","Ventana de Salida de la Forma", MessageBoxButtons.YesNo, MessageBoxIcon.Information))
+            {
+                this.Close();
+            }
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
